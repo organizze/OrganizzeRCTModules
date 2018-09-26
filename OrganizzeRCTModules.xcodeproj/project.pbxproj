@@ -7,28 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		152969EC35F8DAB93D92489F /* Pods_OrganizzeRCTModules_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6712A01B18CCDD64155EB0FD /* Pods_OrganizzeRCTModules_Tests.framework */; };
+		482D010D215BC3F8000C0D6F /* OrganizzeRCTModules.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 482D010A215BC3F8000C0D6F /* OrganizzeRCTModules.podspec */; };
+		482D0111215BC445000C0D6F /* OrganizzeRCTNotificationCenter.h in Sources */ = {isa = PBXBuildFile; fileRef = 482D0107215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.h */; };
+		482D0112215BC445000C0D6F /* OrganizzeRCTNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 482D0106215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.m */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
-		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2BE35ED83FDEE7F14EBEBC45 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		5126C3BC93651F47CC4E7940 /* OrganizzeRCTModules.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = OrganizzeRCTModules.podspec; path = ../OrganizzeRCTModules.podspec; sourceTree = "<group>"; };
+		482D0106215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OrganizzeRCTNotificationCenter.m; path = OrganizzeRCTModules/Classes/OrganizzeRCTNotificationCenter.m; sourceTree = "<group>"; };
+		482D0107215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OrganizzeRCTNotificationCenter.h; path = OrganizzeRCTModules/Classes/OrganizzeRCTNotificationCenter.h; sourceTree = "<group>"; };
+		482D010A215BC3F8000C0D6F /* OrganizzeRCTModules.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrganizzeRCTModules.podspec; sourceTree = "<group>"; };
+		482D0113215BC4EB000C0D6F /* OrganizzeRCTModules_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OrganizzeRCTModules_Tests.xctest; path = "/Users/solanoluz/motion_apps/pods/OrganizzeRCTModules/build/Debug-iphoneos/OrganizzeRCTModules_Tests.xctest"; sourceTree = "<absolute>"; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		6003F5AE195388D20070C39A /* OrganizzeRCTModules_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrganizzeRCTModules_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
-		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
-		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		6712A01B18CCDD64155EB0FD /* Pods_OrganizzeRCTModules_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrganizzeRCTModules_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F109B4381F230A05CDE94D3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		98EF42C8979F4A096549EA48 /* Pods-OrganizzeRCTModules_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizzeRCTModules_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizzeRCTModules_Tests/Pods-OrganizzeRCTModules_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CD2E7050A79A5E21778A94B6 /* Pods-OrganizzeRCTModules_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizzeRCTModules_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizzeRCTModules_Tests/Pods-OrganizzeRCTModules_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,30 +36,29 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				152969EC35F8DAB93D92489F /* Pods_OrganizzeRCTModules_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		482D010F215BC40E000C0D6F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				482D0107215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.h */,
+				482D0106215BC3C4000C0D6F /* OrganizzeRCTNotificationCenter.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
-				6003F5B5195388D20070C39A /* Tests */,
+				482D010A215BC3F8000C0D6F /* OrganizzeRCTModules.podspec */,
+				482D010F215BC40E000C0D6F /* Classes */,
 				6003F58C195388D20070C39A /* Frameworks */,
-				6003F58B195388D20070C39A /* Products */,
 				71F3C31174802B6110BFE0BC /* Pods */,
 			);
-			sourceTree = "<group>";
-		};
-		6003F58B195388D20070C39A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5AE195388D20070C39A /* OrganizzeRCTModules_Tests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6003F58C195388D20070C39A /* Frameworks */ = {
@@ -74,38 +68,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				6712A01B18CCDD64155EB0FD /* Pods_OrganizzeRCTModules_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6003F5B5195388D20070C39A /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
-				6003F5B6195388D20070C39A /* Supporting Files */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		6003F5B6195388D20070C39A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6003F5B7195388D20070C39A /* Tests-Info.plist */,
-				6003F5B8195388D20070C39A /* InfoPlist.strings */,
-				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
-			isa = PBXGroup;
-			children = (
-				5126C3BC93651F47CC4E7940 /* OrganizzeRCTModules.podspec */,
-				2BE35ED83FDEE7F14EBEBC45 /* README.md */,
-				8F109B4381F230A05CDE94D3 /* LICENSE */,
-			);
-			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
 		71F3C31174802B6110BFE0BC /* Pods */ = {
@@ -136,7 +100,7 @@
 			);
 			name = OrganizzeRCTModules_Tests;
 			productName = OrganizzeRCTModulesTests;
-			productReference = 6003F5AE195388D20070C39A /* OrganizzeRCTModules_Tests.xctest */;
+			productReference = 482D0113215BC4EB000C0D6F /* OrganizzeRCTModules_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -163,7 +127,7 @@
 				Base,
 			);
 			mainGroup = 6003F581195388D10070C39A;
-			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			productRefGroup = 6003F581195388D10070C39A;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -177,7 +141,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+				482D010D215BC3F8000C0D6F /* OrganizzeRCTModules.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,22 +199,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				482D0111215BC445000C0D6F /* OrganizzeRCTNotificationCenter.h in Sources */,
+				482D0112215BC445000C0D6F /* OrganizzeRCTNotificationCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5B9195388D20070C39A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6003F5BD195388D20070C39A /* Debug */ = {
