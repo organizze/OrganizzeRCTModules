@@ -1,0 +1,6 @@
+use_frameworks!
+target 'OrganizzeRCTModules_Tests' do
+  pod 'OrganizzeRCTModules', :path => '../'
+  
+  
+end
