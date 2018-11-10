@@ -1,11 +1,10 @@
 #import <Foundation/Foundation.h>
 #import "OrganizzeRCTSales.h"
+#import "OrganizzeRCTNotificationCenter.h"
 
 @implementation OrganizzeRCTSales
 
-RCT_EXPORT_MODULE();
-
-+ (instancetype)sharedInstance {
++ (id) sharedInstance {
     static OrganizzeRCTSales *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -14,19 +13,30 @@ RCT_EXPORT_MODULE();
     return sharedInstance;
 }
 
-- (void) getSubscriptionsPricings:(RCTResponseSenderBlock)callback {
-    self.callbackReact = callback;
-    NSDictionary *params = @{ @"action": @"getSubscriptionPricings" };
-    [OrganizzeRCTNotificationCenter postNotificationWithParams: params];
+// + (void) setCallbackReact: (RCTResponseSenderBlock) callback {
+//     OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+//     instance.callbackReact = callback;
+// }
+
+// + (void) getSubscriptionsPricings {
+//     NSDictionary *params = @{ @"action": @"getSubscriptionPricings" };
+//     [OrganizzeRCTNotificationCenter postNotificationWithParams: params];
+// }
+
++ (void) resolveCallbackWithPricings: (NSDictionary *) pricings {
+    OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+    NSArray *returningArray = [NSArray arrayWithObjects: [NSNull null], pricings, nil];
+    instance.callbackReact(returningArray);
 }
 
-+ resolveCallbackWithPricings: (NSDictionary *) pricings {
-    RCTResponseSenderBlock callback = [[OrganizzeRCTSales sharedInstance] callbackReact];
-    callback(@[[NSNull null], pricings]);
-}
+RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback) {
-    [[OrganizzeRCTSales sharedInstance] getSubscriptionsPricings:callback];
+RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback)
+{
+    OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+    instance.callbackReact = callback;
+    NSMutableDictionary *params = @{ @"action": @"getSubscriptionPricings" };
+    [OrganizzeRCTNotificationCenter postNotificationWithParams:params];
 }
 
 @end
