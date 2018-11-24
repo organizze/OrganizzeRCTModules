@@ -4,10 +4,8 @@
 
 @property (strong) RCTResponseSenderBlock callbackReact;
 
-// + (void) setCallbackReact:(RCTResponseSenderBlock)callback;
-
-// + (void) getSubscriptionsPricings;
-
 + (void) resolveCallbackWithPricings:(NSDictionary *)pricings;
+
++ (void) resolveCallbackSubscriptionsPricingsWithError:(NSDictionary *)error;
 
 @end
