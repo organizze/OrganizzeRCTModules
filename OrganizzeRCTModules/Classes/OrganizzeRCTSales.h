@@ -1,10 +1,13 @@
 #import <React/RCTBridgeModule.h>
-#import "OrganizzeRCTNotificationCenter.h"
 
 @interface OrganizzeRCTSales : NSObject <RCTBridgeModule>
 
-@property (strong) RCTResponseSenderBlock *callbackReact;
+@property (strong) RCTResponseSenderBlock callbackReact;
 
-+ (instancetype)sharedInstance;
+// + (void) setCallbackReact:(RCTResponseSenderBlock)callback;
+
+// + (void) getSubscriptionsPricings;
+
++ (void) resolveCallbackWithPricings:(NSDictionary *)pricings;
 
 @end

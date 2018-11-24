@@ -1,23 +1,16 @@
 #import <Foundation/Foundation.h>
 #import "OrganizzeRCTSales.h"
+#import "OrganizzeRCTNotificationCenter.h"
 
 @implementation OrganizzeRCTSales
 
-RCT_EXPORT_MODULE();
-
-+ (instancetype)sharedInstance {
++ (id) sharedInstance {
     static OrganizzeRCTSales *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[OrganizzeRCTSales alloc] init];
     });
     return sharedInstance;
-}
-
-- (void) getSubscriptionsPricings:(RCTResponseSenderBlock)callback {
-    self.callbackReact = callback;
-    NSDictionary *params = @{ @"action": @"getSubscriptionPricings" };
-    [OrganizzeRCTNotificationCenter postNotificationWithParams: params];
 }
 
 + resolveCallbackSubscriptionsPricingsWithValues: (NSDictionary *) pricings {
@@ -30,8 +23,15 @@ RCT_EXPORT_MODULE();
     callback(@[error, [NSNull null]]);
 }
 
-RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback) {
-    [[OrganizzeRCTSales sharedInstance] getSubscriptionsPricings:callback];
+RCT_EXPORT_MODULE();
+
+RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback)
+{
+    OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+    instance.callbackReact = callback;
+    NSMutableDictionary *params = @{ @"action": @"getSubscriptionPricings" };
+    [OrganizzeRCTNotificationCenter postNotificationWithParams:params];
 }
+
 
 @end
