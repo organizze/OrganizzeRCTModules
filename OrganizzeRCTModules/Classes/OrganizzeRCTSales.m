@@ -20,9 +20,14 @@ RCT_EXPORT_MODULE();
     [OrganizzeRCTNotificationCenter postNotificationWithParams: params];
 }
 
-+ resolveCallbackWithPricings: (NSDictionary *) pricings {
++ resolveCallbackSubscriptionsPricingsWithValues: (NSDictionary *) pricings {
     RCTResponseSenderBlock callback = [[OrganizzeRCTSales sharedInstance] callbackReact];
     callback(@[[NSNull null], pricings]);
+}
+
++ resolveCallbackSubscriptionsPricingsWithError: (NSDictionary *) error {
+    RCTResponseSenderBlock callback = [[OrganizzeRCTSales sharedInstance] callbackReact];
+    callback(@[error, [NSNull null]]);
 }
 
 RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback) {
