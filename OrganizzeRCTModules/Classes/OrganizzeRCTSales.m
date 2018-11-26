@@ -13,25 +13,25 @@
     return sharedInstance;
 }
 
-+ resolveCallbackSubscriptionsPricingsWithValues: (NSDictionary *) pricings {
-    RCTResponseSenderBlock callback = [[OrganizzeRCTSales sharedInstance] callbackReact];
-    callback(@[[NSNull null], pricings]);
++ (void) resolveCallbackSubscriptionsPricingsWithValues: (NSDictionary *) pricings {
+    OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+    NSArray *returningArray = [NSArray arrayWithObjects: [NSNull null], pricings, nil];
+    instance.callbackReact(returningArray);
 }
 
-+ resolveCallbackSubscriptionsPricingsWithError: (NSDictionary *) error {
-    RCTResponseSenderBlock callback = [[OrganizzeRCTSales sharedInstance] callbackReact];
-    callback(@[error, [NSNull null]]);
++ (void) resolveCallbackSubscriptionsPricingsWithError: (NSDictionary *) error {
+    OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
+    NSArray *returningArray = [NSArray arrayWithObjects: error, [NSNull null], nil];
+    instance.callbackReact(returningArray);
 }
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback)
-{
+RCT_EXPORT_METHOD(getSubscriptionsPricings:(RCTResponseSenderBlock)callback) {
     OrganizzeRCTSales *instance = [OrganizzeRCTSales sharedInstance];
     instance.callbackReact = callback;
     NSMutableDictionary *params = @{ @"action": @"getSubscriptionPricings" };
     [OrganizzeRCTNotificationCenter postNotificationWithParams:params];
 }
-
 
 @end
