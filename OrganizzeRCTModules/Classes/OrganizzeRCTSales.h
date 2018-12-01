@@ -8,4 +8,8 @@
 
 + (void) resolveCallbackSubscriptionsPricingsWithError:(NSDictionary *)error;
 
++ (void) resolveCallbackSubscriptionsSubscriptionSuccess:(NSDictionary *)success;
+
++ (void) resolveCallbackSubscriptionsSubscriptionError:(NSDictionary *)error;
+
 @end
